@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D - CUBE</title>
+    <link rel="stylesheet" href="css/3_5_cube.css">
+</head>
+
+<body id="second">
+<header>
+    <div>
+        <div id="title">
+            <h1>카와이조</h1>
+        </div>
+        <div class="menu">
+            <ul class="topnav">
+                <li><a href="#">고경수</a></li>
+                <li><a href="#">이현아</a></li>
+                <li><a href="#">최영은</a></li>
+                <li><a href="#">배석휘</a></li>
+                <li><a href="MyPage2.html">전일규</a></li>
+                <li><a class="scrolly" href="#first">오늘의 점심</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="scene">
+    <div class="cube">
+            <span class="box"><a href="seokhwi/index.html">
+                   <div class="box" style="background: #BDBDBD;">
+                    <img class="profile" src="images/kkk1.jpg">
+                </div>
+                </a></span>
+
+        <span class="box"><a href="seokhwi/index.html">
+            <div class="box" style="background: #BDBDBD;">
+                <img class="profile" src="images/h11.jpg">
+            </div>
+                </a></span>
+
+        <span class="box"><a href="seokhwi/index.html">
+                      <div class="box" style="background: #BDBDBD;">
+                        <img class="profile" src="images/yy1.jpg">
+                    </div>
+                </a></span>
+
+        <span class="box"><a href="seokhwi/index.html">
+                    <div class="box" style="background: #BDBDBD;">
+                        <img class="profile" src="images/b1.jpg">
+                    </div>
+                </a></span>
+
+        <span class="box"><a href="seokhwi/index.html">
+                    <div class="box" style="background: #BDBDBD;">
+                        <img class="profile" src="images/j10.jpg">
+                    </div>
+                </a></span>
+
+        <span class="box"><a href="seokhwi/index.html">
+                    <div class="box" style="background: #BDBDBD;">
+                        <img class="profile" src="images/p1.jpg">
+                    </div>
+                </a></span>
+
+       <!-- <span><a href="seokhwi/index.html">
+                    <img style="width: 100%; height: 100%; object-fit: cover;">
+                </a></span>-->
+    </div>
+</div>
+
+<div class="center">
+    <p id="first"></p>
+    <h1 style="font-size: 55px; color: MediumSeaGreen">강남역 맛집</h1>
+
+        <div id="map" style="margin-bottom: 40px"></div>
+
+    <!--<div style="align: right; border: 1px solid black">
+    </div>-->
+        <h1><a class="scrolly" href="#second" style="font-size: 55px; align: right; color: PaleVioletRed">위로</a></h1>
+
+</div>
+</body>
+<script src="scrolly.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        Scrolly.init({
+            "selector": "scrolly",
+            "speed": 1000,
+        });
+    });
+</script>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1496c9f4924a9ff5211ebddff6f2c272"></script>
+<script src="map.js"></script>
+
+</html>

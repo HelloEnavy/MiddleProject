@@ -1,0 +1,388 @@
+/*  */
+
+.overlaybox {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/box_movie.png') no-repeat;
+    padding: 15px 10px;
+}
+
+.overlaybox div,
+ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.overlaybox li {
+    list-style: none;
+}
+
+.overlaybox .boxtitle {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.overlaybox .first {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 8px;
+}
+
+.first .text {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.first .triangle {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/triangle.png') no-repeat;
+    padding: 6px;
+    font-size: 18px;
+}
+
+.first .movietitle {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 7px 15px;
+    font-size: 14px;
+}
+
+.overlaybox ul {
+    width: 247px;
+}
+
+.overlaybox li {
+    position: relative;
+    margin-bottom: 2px;
+    background: #2b2d36;
+    padding: 5px 10px;
+    color: #aaabaf;
+    line-height: 1;
+}
+
+.overlaybox li span {
+    display: inline-block;
+}
+
+.overlaybox li .number {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.overlaybox li .title {
+    font-size: 13px;
+}
+
+.overlaybox ul .arrow {
+    position: absolute;
+    margin-top: 8px;
+    right: 25px;
+    width: 5px;
+    height: 3px;
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/updown.png') no-repeat;
+}
+
+.overlaybox li .up {
+    background-position: 0 -40px;
+}
+
+.overlaybox li .down {
+    background-position: 0 -60px;
+}
+
+.overlaybox li .count {
+    position: absolute;
+    margin-top: 5px;
+    right: 15px;
+    font-size: 10px;
+}
+
+.overlaybox li:hover {
+    color: #fff;
+    background: #d24545;
+}
+
+.overlaybox li:hover .up {
+    background-position: 0 0px;
+}
+
+.overlaybox li:hover .down {
+    background-position: 0 -20px;
+}
+
+
+/* overlay close */
+
+.overlaybox .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    color: #fff;
+    width: 7px;
+    height: 15px;
+    background: url('https://image.pngaaa.com/984/28984-middle.png');
+}
+
+.overlaybox .close:hover {
+    cursor: pointer;
+}
+
+body {
+    margin: 50px;
+    /* 스크롤바 숨기기 */
+    /* scroll: no; */
+    overflow: hidden;
+}
+
+.scene {
+    perspective: 2000px;
+    margin-bottom: 100px;
+}
+
+.cube {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    left: 900px;
+    top: 250px;
+    animation-name: playBox;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
+    transform: translateZ(-1000px);
+}
+
+@keyframes playBox {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(0deg) rotateZ(720deg);
+        /* 원래 코드: transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); 
+           이대로 실행하면 어느 면은 절대 보이지 않는다
+        */
+    }
+}
+
+div span {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    display: block;
+    backface-visibility: visible;
+}
+
+div #cube1 {
+    background-color: LightPink;
+    transform: translateZ(300px);
+}
+
+div #cube2 {
+    background-color: LightGreen;
+    transform: rotateY(90deg) translateZ(300px);
+}
+
+div #cube3 {
+    background-color: LightCoral;
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+div #cube4 {
+    background-color: DarkSeaGreen;
+    transform: rotateY(270deg) translateZ(300px);
+}
+
+div #cube5 {
+    background-color: Khaki;
+    transform: rotateX(90deg) translateZ(300px);
+}
+
+div #cube6 {
+    background-color: WhiteSmoke;
+    transform: rotateX(270deg) translateZ(300px);
+}
+
+
+/*div span:nth-of-type(6) {
+    background: linear-gradient(45deg, Violet, Orange);
+    transform: rotateX(270deg) translateZ(300px);
+}*/
+
+
+/* navigation */
+
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'BMJUA';
+}
+
+#title {
+    /*border: 1px solid black;*/
+    float: left;
+    overflow: hidden;
+    font-family: 'BMJUA';
+    font-size: 30px;
+    color: PaleVioletRed;
+    margin-left: 50px;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    padding-top: 45px;
+    padding-left: 70px;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'BMJUA';
+    font-size: 25px;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+    color: MediumSeaGreen;
+}
+
+ul.topnav li a.active {
+    background-color: green;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+@media screen and (max-width: 1425px) {
+    /* 1425px 이하  */
+    ul.topnav li a {
+        padding: 14px 25px;
+    }
+}
+
+@media screen and (max-width: 1163px) {
+    /* ul.topnav li.right,
+    ul.topnav li {float: none;}*/
+    ul.topnav li a {
+        padding: 14px 5px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    #map {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-family: 'BMJUA';
+}
+
+
+/* api */
+
+.center {
+    padding: 400px 0px 0px 0px;
+    justify-content: center;
+    /*border: 1px solid black;*/
+    margin: 50px;
+}
+
+#center1 {
+    /* text-align: bottom right;*/
+    margin: 0px;
+}
+
+
+/* #map {
+    width: 750px;
+    height: 650px;
+    margin: 0 auto;
+
+
+} */
+
+#map {
+    width: 750px;
+    height: 650px;
+    position: relative;
+    display: block;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (max-width: 945px) {
+    #square {
+        width: 100%;
+        position: relative;
+        height: 86.6%;
+    }
+    #square:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    #map {
+        position: absolute;
+        width: 100%;
+        height: 86.6%;
+    }
+    #upbtn {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+
+/* cube profile */
+
+.box {
+    width: 500px;
+    height: 500px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}

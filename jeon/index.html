@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Story by HTML5 UP</title>
+<script type="text/javascript">
+	function dragEnter(ev) {
+		ev.preventDefault();
+	}
+
+	function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets1/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="assets1/css/noscript.css" />
+</noscript>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="divided">
+
+		<!-- One -->
+		<section
+			class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+			<div class="content">
+			<audio src= "mp33/iu.mp3" autoplay controls ></audio>
+				<h1 style="font-weight: 800;"># 2조_전일규</h1>
+				<p class="major">
+					● 나이 : 24 (만23)<br> ● 이름 : 전일규<br> ● 성격 : 진짜 소심함<br>
+					● 경력 : 군인3년, 건설목수1년<br> ● 취미 : 게임, 운동 이였었음
+				</p>
+			</div>
+			<div class="image">
+				<img src="images/main.jpg" alt="" />
+			</div>
+		</section>
+
+		<!-- Two -->
+		<section
+			class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+			id="first">
+			<div class="content">
+				<h2 style="font-weight: 800;"># 버킷 리스트</h2>
+				<p>
+					● 인정받는 개발자 되기..<br> ● 세계여행<br> ● 내집 내가 짓기
+				</p>
+
+			</div>
+			<div class="image">
+				<img src="images/main2.jpg" alt="" />
+			</div>
+		</section>
+
+		<!-- Three -->
+		<section
+			class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2 style="font-weight: 800;"># 즐거웠던 추억 !!</h2>
+				<p>이때는 마냥 즐거웠다..
+				<div id="ex1" class="modal">
+					<p>
+						<video autoplay controls loop muted>
+							<source src="video11/video1.mp4" type="video/mp4">
+						</video>
+
+					</p>
+					<a href="#" rel="modal:close">닫기</a>
+				</div>
+
+				<p>
+					<a href="#ex1" rel="modal:open">생생한 현장속으로</a>
+				</p>
+
+
+				<div>
+					<video autoplay controls loop muted
+						style="width: 800px; height: 800px;">
+						<source src="video11/video1.mp4" type="video/mp4">
+					</video>
+				</div>
+
+			</div>
+			<div class="image">
+				<img src="images/spotlight02.jpg" alt="" />
+			</div>
+		</section>
+		<!-- Five -->
+		<section class="wrapper style1 align-center">
+			<div class="inner">
+				<h2 style="font-weight: 800;">하나같이 명작이지만 굳이 고르자면?!</h2>
+				<p>세개만 골라주세요 ~</p>
+			</div>
+
+			<!-- Gallery -->
+			<div class="gallery style2 medium lightbox onscroll-fade-in">
+				<article>
+					<a href="images/pic1.jpg" class="image"> 
+					<img id="pic1" style="width: 420px; height: 290px;" src="images/pic1.jpg" draggable="true" ondragstart="drag(event)" />
+					</a>
+					<div class="caption" style="" ondrop="drop(event)" ondragover="dragEnter(event)">
+						<h3></h3>
+						<p>제주도 여행가서 맞은 생일~</p>
+						<ul class="actions fixed">
+							<li><span class="button small">Details</span></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="images/pic2.jpg" class="image"> 
+					<img id="pic2" style="width: 420px; height: 290px;" src="images/pic2.jpg" draggable="true" ondragstart="drag(event)" />
+					</a>
+					<div class="caption" style="" ondrop="drop(event)" ondragover="dragEnter(event)">
+						<h3></h3>
+						<p>쉽지않은 선물...북진통일?</p>
+						<ul class="actions fixed">
+							<li><span class="button small">Details</span></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="images/pic3.jpg" class="image"> 
+					<img id="pic3" style="width: 420px; height: 290px;" src="images/pic3.jpg" draggable="true" ondragstart="drag(event)" />
+					</a>
+					<div class="caption" style="" ondrop="drop(event)" ondragover="dragEnter(event)">
+						<h3></h3>
+						<p>바다냄새 가득했던 성게내장비빔밥!</p>
+						<ul class="actions fixed">
+							<li><span class="button small">Details</span></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="images/pic4.jpg" class="image"> 
+					<img id="pic4" style="width: 420px; height: 290px;" src="images/pic4.jpg" draggable="true" ondragstart="drag(event)" />
+					</a>
+					<div class="caption" style="" ondrop="drop(event)" ondragover="dragEnter(event)">
+						<h3></h3>
+						<p>코 자는 콩이</p>
+						<ul class="actions fixed">
+							<li><span class="button small">Details</span></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="images/pic5.jpg" class="image"> 
+					<img id="pic5" style="width: 420px; height: 290px;" src="images/pic5.jpg" draggable="true" ondragstart="drag(event)" />
+					</a>
+					<div class="caption" style="" ondrop="drop(event)" ondragover="dragEnter(event)">
+						<h3></h3>
+						<p>라이딩 재밌지</p>
+						<ul class="actions fixed">
+							<li><span class="button small">Details</span></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="images/pic6.jpg" class="image"> 
+					<img id="pic6" style="width: 420px; height: 290px; " src="images/pic6.jpg" draggable="true" ondragstart="drag(event)" />
+					</a>
+					<div class="caption" style="" ondrop="drop(event)" ondragover="dragEnter(event)">
+						<h3></h3>
+						<p>난 어렵던데 나만 어렵나 ㅋㅋ...;;</p>
+						<ul class="actions fixed">
+							<li><span class="button small">Details</span></li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</section>
+		<div style="width: 450px; height: 350px; margin: 10px; padding: 3px; border: solid 3px skyblue; float: left;"
+			ondrop="drop(event)" ondragover="dragEnter(event)">잘찍었다 1위!</div>
+		<div style="width: 450px; height: 350px; margin: 10px; padding: 3px; border: solid 3px skyblue; float: left;"
+			ondrop="drop(event)" ondragover="dragEnter(event)">나름 찍었네 2위!</div>
+			<div style="width: 450px; height: 350px; margin: 10px; padding: 3px; border: solid 3px skyblue; float: left;"
+			ondrop="drop(event)" ondragover="dragEnter(event)">뭐.. 그럭저럭 3위!</div>
+		<!-- Footer -->
+		<footer class="wrapper style1 align-center">
+			<div class="inner" style="float: center;">
+				<ul class="icons">
+					<li><a href="https://github.com/gyu9189/java"><img src="https://media.vlpt.us/images/cyongchoi/post/9f4a8b71-bdf4-4266-b25c-40fc5e29d761/asasf.png" style="width: 100px; height: 60px;"><span class="label"></span></a></li>
+					<li><a href="https://velog.io/@gyu9189"><img src="data:image/png;base64,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" style="width: 100px; height: 60px;"><span class="label"></span></a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets1/js/jquery.min.js"></script>
+	<script src="assets1/js/jquery.scrollex.min.js"></script>
+	<script src="assets1/js/jquery.scrolly.min.js"></script>
+	<script src="assets1/js/browser.min.js"></script>
+	<script src="assets1/js/breakpoints.min.js"></script>
+	<script src="assets1/js/util.js"></script>
+	<script src="assets1/js/main.js"></script>
+
+</body>
+</html>
